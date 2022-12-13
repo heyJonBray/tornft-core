@@ -1,4 +1,5 @@
-# TorNFT Privacy Solution [![build status](https://github.com/heyjonbray/tornft-core/actions/workflows/build.yml/badge.svg)](https://github.com/heyjonbray/tornft-core/actions/workflows/build.yml) [![Coverage Status](https://coveralls.io/repos/github/heyjonbray/tornft-core/badge.svg?branch=master)](https://coveralls.io/github/heyjonbray/tornft-core?branch=master)
+# TorNFT Privacy Solution
+[![Coverage Status](https://coveralls.io/repos/github/heyjonbray/tornft-core/badge.svg?branch=master)](https://coveralls.io/github/heyjonbray/tornft-core?branch=master)
 
 TorNFT is a non-custodial ERC721 privacy solution based on zkSNARKs, and a fork of the [Tornado Cash Protocol](https://github.com/tornadocash/tornado-core). It improves transaction privacy by breaking the on-chain link between the recipient and destination addresses. It uses a smart contract that accepts ERC71 deposits that can be withdrawn by a different address. Whenever the NFT is withdrawn by the new address, there is no way to link the withdrawal to the deposit, ensuring complete privacy.
 
