@@ -1,8 +1,12 @@
-# Tornado Cash Privacy Solution [![build status](https://github.com/tornadocash/tornado-core/actions/workflows/build.yml/badge.svg)](https://github.com/tornadocash/tornado-core/actions/workflows/build.yml) [![Coverage Status](https://coveralls.io/repos/github/tornadocash/tornado-core/badge.svg?branch=master)](https://coveralls.io/github/tornadocash/tornado-core?branch=master)
+# TorNFT Privacy Solution [![build status](https://github.com/heyjonbray/tornft-core/actions/workflows/build.yml/badge.svg)](https://github.com/heyjonbray/tornft-core/actions/workflows/build.yml) [![Coverage Status](https://coveralls.io/repos/github/heyjonbray/tornft-core/badge.svg?branch=master)](https://coveralls.io/github/heyjonbray/tornft-core?branch=master)
 
-Tornado Cash is a non-custodial Ethereum and ERC20 privacy solution based on zkSNARKs. It improves transaction privacy by breaking the on-chain link between the recipient and destination addresses. It uses a smart contract that accepts ETH deposits that can be withdrawn by a different address. Whenever ETH is withdrawn by the new address, there is no way to link the withdrawal to the deposit, ensuring complete privacy.
+TorNFT is a non-custodial ERC721 privacy solution based on zkSNARKs, and a fork of the [Tornado Cash Protocol](https://github.com/tornadocash/tornado-core). It improves transaction privacy by breaking the on-chain link between the recipient and destination addresses. It uses a smart contract that accepts ERC71 deposits that can be withdrawn by a different address. Whenever the NFT is withdrawn by the new address, there is no way to link the withdrawal to the deposit, ensuring complete privacy.
 
-To make a deposit user generates a secret and sends its hash (called a commitment) along with the deposit amount to the Tornado smart contract. The contract accepts the deposit and adds the commitment to its list of deposits.
+//TODO: Integrate masked sending to a bulk (zero-non-zero) account to create transactional privacy...
+
+To make a deposit user generates a secret and sends its hash (called a commitment) along with the deposit amount to the TorNFT smart contract. The contract accepts the NFT and adds the commitment to its list of deposits.
+
+//TODO: Upload technical implementation of private NFT transactions...
 
 Later, the user decides to make a withdrawal. To do that, the user should provide a proof that he or she possesses a secret to an unspent commitment from the smart contract’s list of deposits. zkSnark technology allows that to happen without revealing which exact deposit corresponds to this secret. The smart contract will check the proof and transfer deposited funds to the address specified for withdrawal. An external observer will be unable to determine which deposit this withdrawal came from.
 
